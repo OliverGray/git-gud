@@ -1,6 +1,12 @@
 import argparse, pyfiglet, sys
 
-class git(object):
+
+class colors:
+    RED='\u001b[31m'
+    GREEN='\u001b[32m'
+    YELLOW='\u001b[33m'
+
+class git(object):    
     @staticmethod
     def parse_args(cmdname):
         parser = argparse.ArgumentParser(description="Have you been told to 'get %s'? Now you can!" % cmdname)
@@ -26,7 +32,7 @@ class git(object):
                                                       qual="super" if sup else "so")
         if sup:
             text = git.fig(text)
-        print(text)
+        print(colors.GREEN+text)
 
     @staticmethod
     def rekt():
@@ -37,7 +43,7 @@ class git(object):
                                                 qual="super " if sup else "")
         if sup:
             text = git.fig(text)
-        print(text)
+        print(colors.RED+text)
 
     @staticmethod
     def spooked():
@@ -48,7 +54,7 @@ class git(object):
 
         if sup:
             text = git.fig(text)
-        print(text)
+        print(colors.YELLOW+text)
 
     @staticmethod
     def job():
@@ -59,7 +65,7 @@ class git(object):
         
         if sup:
             text = git.fig(text)
-        print(text)
+        print(colors.RED+text)
     
     @staticmethod
     def money():
@@ -70,5 +76,5 @@ class git(object):
         
         if sup:
             text = git.fig(text)
-        print(text)
+        print(colors.GREEN+text)
                                                             
